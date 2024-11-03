@@ -1,5 +1,5 @@
 {
-  "name": "normalhuman",
+  "name": "inboxpert",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -9,7 +9,7 @@
     "db:migrate": "prisma migrate deploy",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
-    "dev": "next dev --turbo --port 3001 | egrep -v '^\\s?(GET|POST|OPTIONS)'",
+    "dev": "next dev --turbo --port 3001 | findstr /V /R /C:\"^\\s*GET\" /C:\"^\\s*POST\" /C:\"^\\s*OPTIONS\"",
     "postinstall": "prisma generate",
     "lint": "next lint",
     "start": "next start"
