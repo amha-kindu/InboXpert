@@ -11,7 +11,7 @@ export const GET = async (req: NextRequest) => {
 
     const params = req.nextUrl.searchParams
     const status = params.get('status');
-    if (status !== 'success') return NextResponse.json({ error: "Account connection failed" }, { status: 400 });
+    // if (status !== 'success') return NextResponse.json({ error: "Account connection failed" }, { status: 400 });
 
     const code = params.get('code');
     const token = await getAurinkoToken(code as string)
